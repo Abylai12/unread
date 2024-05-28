@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header {
+  background-color: gray;
+}
+nav {
+  padding: 1% 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-row {
+  display: flex;
+  gap: 100px;
+}
+.nav-parallel {
+  display: flex;
+}
+.logo-img {
+  width: 133px;
+  height: 18px;
+}
+.divider {
+  border-left: 1px solid black;
+  height: 18px;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+.fontAwesome {
+  font-family: "Helvetica", FontAwesome, sans-serif;
+  background-color: transparent;
+  border: none;
+}
