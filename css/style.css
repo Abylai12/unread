@@ -15,16 +15,18 @@ nav {
 .nav-row {
   display: flex;
   gap: 100px;
+  align-items: center;
 }
 .nav-parallel {
   display: flex;
+  align-items: center;
 }
 .logo-img {
   width: 133px;
   height: 18px;
 }
 .divider {
-  border-left: 1px solid black;
+  border-left: 1px solid #fff;
   height: 18px;
   margin-left: 24px;
   margin-right: 24px;
@@ -33,4 +35,25 @@ nav {
   font-family: "Helvetica", FontAwesome, sans-serif;
   background-color: transparent;
   border: none;
+}
+.chip {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #fff;
+  font-weight: 500;
+  font-size: 15px;
+  margin-left: 10px;
+  text-decoration: none;
+}
+.opacity {
+  color: #fff;
+}
+.color {
+  opacity: 0.5;
+}
+.social a {
+  color: #fff;
+  opacity: 0.3;
 }
