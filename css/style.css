@@ -4,33 +4,37 @@
   box-sizing: border-box;
 }
 .header {
-  background-image: url(../image/back1.jpeg);
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 1%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url(../image/back1.jpeg);
   background-position: center;
   background-size: cover;
   width: 100%;
   height: 92vh;
   background-blend-mode: darken;
-  background-color: rgba(4, 9, 30, 0.6);
+  background-color: rgba(0, 0, 0, 0.6);
 }
+.header-container {
+  width: calc(100% - 90px);
+  max-width: 1525px;
+  padding: 24px 0 19px 0;
+  margin: auto;
+}
+.nav-container {
+  margin: auto;
+}
+
 nav {
-  padding: 1% 8%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.nav-row {
-  display: flex;
-  gap: 100px;
-  align-items: center;
-  justify-content: center;
-}
-.nav-parallel {
-  display: flex;
-  align-items: center;
-}
 .logo-img {
   width: 133px;
-  height: 18px;
+  height: 19px;
 }
 .divider {
   border-left: 1px solid #fff;
@@ -39,13 +43,16 @@ nav {
   margin-right: 24px;
 }
 .fontAwesome {
-  font-family: "Helvetica", FontAwesome, sans-serif;
   background-color: transparent;
   border: none;
+  margin-left: 5px;
+  caret-color: #fff;
+  outline: none;
 }
+
 .chip {
   display: inline-block;
-  padding: 8px 18px;
+  padding: 8px 24px;
   border-radius: 30px;
   background-color: rgba(255, 255, 255, 0.5);
   color: #fff;
@@ -67,10 +74,13 @@ nav {
   margin-right: 10px;
 }
 .fa-magnifying-glass {
-  display: none;
-}
-.fa-solid {
   color: #fff;
+  opacity: 0.3;
+}
+.fa-bars {
+  color: #fff;
+  width: 19px;
+  height: 19px;
 }
 .row-image {
   background-image: url(../image/back1.jpeg);
@@ -87,7 +97,22 @@ nav {
   color: #fff;
 }
 .container {
-  margin-top: 70px;
+  width: 100%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-row {
+  display: flex;
+  gap: 20px;
+}
+.row-content {
+  margin-top: 40px;
+  margin-bottom: 40 px;
+}
+.row-compare {
+  margin: auto;
 }
 .row img {
   border-radius: 22px;
@@ -96,7 +121,6 @@ nav {
 .row-content > span,
 h2 {
   font-size: 36px;
-  line-height: 4.3rem;
   font-weight: 900;
   color: #fff;
 }
@@ -108,6 +132,15 @@ h2 {
 .date span {
   opacity: 0.5;
 }
+.fa-circle {
+  color: blue;
+  height: 1px;
+  width: 1px;
+}
+.row-content h3 {
+  margin-bottom: 30px;
+  color: blue;
+}
 @media only screen and (max-width: 480px) {
   .social {
     display: none;
@@ -115,27 +148,56 @@ h2 {
   .ghost {
     display: none;
   }
-  .fa-magnifying-glass {
-    display: inline-block;
-    color: #fff;
-  }
   .nav-parallel input {
     display: none;
   }
   nav {
-    padding: 6% 4%;
+    padding: 6% 10%;
+  }
+  .fa-magnifying-glass {
+    opacity: 1;
   }
   .row-image {
     display: none;
   }
+  .row-content {
+    margin-left: 20px;
+    margin-top: 50px;
+  }
   .row-content > span,
   h2 {
     font-size: 28px;
-    line-height: 2.5rem;
     font-weight: 900;
     color: #fff;
   }
-  .container {
-    margin-top: 200px;
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .social {
+    display: none;
+  }
+  .nav-parallel input {
+    display: none;
+  }
+  .fa-magnifying-glass {
+    opacity: 1;
+  }
+  .ghost > span {
+    font-size: 12px;
+  }
+  .chip {
+    font-size: 10px;
+  }
+  .row-content {
+    margin-left: 20px;
+    margin-top: 50px;
+  }
+  .row-content > span,
+  h2 {
+    font-size: 28px;
+    font-weight: 900;
+    color: #fff;
+  }
+  nav {
+    padding: 10px 25px;
   }
 }
