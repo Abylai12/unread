@@ -239,8 +239,8 @@ h2 {
   background-position: center;
   background-size: cover;
   border-radius: 10px;
-  width: 230px;
-  height: 300px;
+  width: 290px;
+  height: 430px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -334,17 +334,43 @@ h2 {
   height: 20vh;
 }
 .this-week {
-  width: 70%;
+  width: 50%;
   margin: 0 auto;
 }
-.right {
+.absolute-right {
   display: flex;
   flex-direction: column;
   align-items: end;
 }
-.side-content {
-  margin-top: 2%;
+.exchange {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: end;
 }
+.exchange img {
+  margin: 0 10px;
+}
+.side-content {
+  margin-top: 4%;
+  transition: all 0.3s linear;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.right {
+  margin-top: 4%;
+  transition: all 0.3s linear;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.side-content:hover {
+  transform: translateY(-10px);
+}
+
 .unread-text {
   display: flex;
   width: 100%;
@@ -358,6 +384,10 @@ h2 {
   border-radius: 20px;
   padding: 28px 40px;
   margin-top: 13px;
+  transition: box-shadow 0.3s;
+}
+.overlay-content:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
 }
 
 .unread-img {
@@ -394,4 +424,78 @@ h2 {
   font-size: 22px;
   max-width: 400px;
   font-weight: 700;
+}
+/* pre-week starting point */
+.pre-week {
+  width: 50%;
+  margin: 0 auto;
+}
+.nav-date ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  /* padding: 20px 0; */
+  border-bottom: 2px solid #888888;
+  margin: 40px 0;
+}
+
+.nav-date ul li {
+  border-bottom: 4px solid transparent;
+  padding: 20px 50px;
+}
+.nav-date ul li:hover {
+  border-color: #1e90ff;
+  color: #1e90ff;
+}
+/* grid box */
+.part1-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 270px 90px 234px;
+  border-color: white;
+  gap: 50px;
+}
+.box {
+  border-radius: 20px;
+}
+.boxes-1 {
+  grid-column: 2 span;
+  grid-row: 2 span;
+  background-image: url(../image/grid1.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+.boxes-4,
+.boxes-5 {
+  grid-row: 2 span;
+}
+.boxes-2 {
+  background-image: url(../image/grid2.png);
+  background-size: cover;
+  background-position: center;
+}
+.boxes-3 {
+  background-image: url(../image/grid3.png);
+  background-size: cover;
+  background-position: center;
+}
+.boxes-4 {
+  background-image: url(../image/grid4.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+.boxes-5 {
+  background-image: url(../image/grid5.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+.boxes-6 {
+  background-image: url(../image/grid6.png);
+  background-size: cover;
+  background-position: center;
+}
+.boxes-7 {
+  background-image: url(../image/grid7.jpeg);
+  background-size: cover;
+  background-position: center;
 }
