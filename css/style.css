@@ -509,9 +509,16 @@ h2 {
   flex-direction: column;
   justify-content: end;
   height: 100%;
+  transition: all 0.5s ease-in;
 }
-.box-content > h6,
-p {
+.box:hover {
+  box-shadow: 10px 10px 8px 10px #888888;
+  transform: translateY(-10px);
+}
+.box-content > h6 {
+  padding: 0 8%;
+}
+.box-content > p {
   padding: 0 8%;
 }
 .box-content h6 {
@@ -533,4 +540,84 @@ p {
   backdrop-filter: blur(5px);
   border-radius: 8px;
   padding: 1% 2%;
+}
+/* footer starting point */
+.footer {
+  background-color: black;
+}
+footer {
+  width: 60%;
+  margin: 0 auto;
+  padding: 5% 0;
+  color: #fff;
+}
+.footer-center {
+  display: flex;
+  justify-content: space-between;
+}
+.content-links ul {
+  display: flex;
+  font-size: 15px;
+  gap: 30px;
+}
+.authority {
+  font-size: 11px;
+  font-size: 13px;
+  opacity: 0.5;
+  font-weight: 400;
+}
+.contact-one ul {
+  list-style-type: none;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  opacity: 0.5;
+  font-weight: 400;
+}
+.contact-one h3 {
+  margin-bottom: 5px;
+}
+.footer-contact {
+  display: flex;
+  gap: 10%;
+}
+.footer-arrow h5 {
+  font-size: 13px;
+  opacity: 0.5;
+  font-weight: 400;
+}
+.footer-arrow {
+  padding: 2% 10%;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  border-radius: 10px;
+  position: relative;
+}
+.fa-circle-arrow-right {
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  translate: -50% -50%;
+}
+.footer-content-right > div {
+  padding: 2% 5%;
+}
+.contact-one h2 {
+  color: black;
+  font-size: 24px;
+}
+.footer-content-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  width: 470px;
+}
+.contact-one h3 {
+  color: #1e90ff;
+}
+.color-link {
+  color: #fff;
+  font-size: 13px;
 }
